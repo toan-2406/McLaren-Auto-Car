@@ -3,13 +3,10 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import PostView from "./PostView";
 import postData from "../../assets/fake-data/post";
-import { remove } from "../../redux/post-modal/PostModalSlice";
 import { useDispatch } from "react-redux";
 
 const PostModal = () => {
   const postSlug = useSelector((state) => state.postModal.post);
-
-  const dispatch = useDispatch();
 
   const [post, setPost] = useState(undefined);
 

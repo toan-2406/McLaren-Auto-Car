@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import postData from "../../assets/fake-data/post";
 // Import Swiper styles
@@ -7,7 +7,6 @@ import "swiper/css/pagination";
 
 // import Swiper core and required modules
 import SwiperCore, { Pagination } from "swiper";
-import PostModal from "./PostModal";
 
 //import useDispatch
 import { useDispatch } from "react-redux";

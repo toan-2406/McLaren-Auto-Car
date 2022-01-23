@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import productData from "../assets/fake-data/product";
 import { Link } from "react-router-dom";
 import { navModelProductSelector } from "../redux/selector";
@@ -41,7 +41,7 @@ const NavModel = () => {
                 <Link to={"/store/" + item.slug}>
                   <Button
                     backgroundColor="transparent"
-                    style="outer-stoke"
+                    style={"outer-stoke"}
                     size="md"
                     onClick={handleClose}
                   >

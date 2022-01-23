@@ -103,7 +103,7 @@ const CarView = () => {
             ))}
           </div>
           <div className="car-view__navigation__btn">
-            <Button style="outer-stoke" size="sm">
+            <Button style={"outer-stoke"} size="sm">
               Configure
             </Button>
             <Button backgroundColor="orange" size="sm">
