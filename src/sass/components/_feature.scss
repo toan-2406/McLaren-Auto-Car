@@ -1,0 +1,134 @@
+.feature {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    margin-bottom: 40px;
+
+    @include tablet {
+        height: 65vh;
+    }
+    @include mobile {
+        height: 50vh;
+    }
+
+    .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(10px);
+    }
+
+    &__wrapper {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        width: 55%;
+        height: 100%;
+        @include mobile {
+            width: 100%;
+        }
+        &__img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                span {
+                    visibility: visible;
+                    transition: all 0.1s ease-in;
+                    transform: translateX(0);
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &__title {
+                position: absolute;
+                left: 10%;
+                bottom: 10%;
+                font-size: 3rem;
+                text-transform: uppercase;
+                font-weight: 300;
+                color: #fff;
+                line-height: 1;
+                width: 100%;
+
+                @include mobile {
+                    font-size: 2.5rem;
+                    left: 5%;
+                }
+
+                cursor: pointer;
+
+                span {
+                    font-size: 1.1rem !important;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    display: flex;
+                    align-items: center;
+
+                    visibility: hidden;
+                    transform: translateX(-100px);
+
+                    svg {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    &__number {
+        position: absolute;
+        bottom: 0;
+        font-size: 36rem;
+        font-weight: 700;
+        width: 50%;
+        line-height: 1;
+        background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -29px;
+        user-select: none;
+        @include mobile {
+            display: none;
+        }
+        @include tablet {
+            font-size: 25rem;
+            width: 55%;
+        }
+    }
+}
+
+.odd {
+    left: 0;
+}
+.even {
+    right: 0;
+    .feature__wrapper {
+        &__img {
+            transform: translateY(-40px);
+            @include mobile {
+                transform: translateY(0);
+            }
+        }
+    }
+}
+.chan {
+    left: -80px;
+}
+.le {
+    right: 40px;
+}
+
+// .select{
+//     transform: translateY(-20px);
+// }

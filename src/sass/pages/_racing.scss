@@ -1,0 +1,22 @@
+.racing {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__btn {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-flow: row nowrap;
+
+        & > * ~ * {
+            margin-left: 0.05rem;
+        }
+    }
+}

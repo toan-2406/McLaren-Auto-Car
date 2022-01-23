@@ -1,0 +1,74 @@
+.nav-modal {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+    background-color: $main-navbar-color;
+    z-index: 9;
+    padding: $header-height 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+
+    &.active {
+        transform: translateY(0);
+        height: calc(100vh - 80px);
+    }
+    &__item {
+        @include flex(center, center);
+        flex-direction: column;
+        padding: 40px 20px 0px;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.507);
+            .nav-modal__item__controls {
+                transform: translateY(0);
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        &__img {
+            width: 100%;
+            max-width: 200px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+        &__name {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        &__controls {
+            width: 100%;
+            height: auto;
+            background-color: transparent;
+            transform: translateY(-10px);
+            z-index: 10;
+            visibility: hidden;
+            transition: all 0.5s ease-in-out;
+            opacity: 0;
+        }
+    }
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.507);
+    z-index: -1;
+}

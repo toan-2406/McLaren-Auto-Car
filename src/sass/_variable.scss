@@ -1,0 +1,39 @@
+$main-bg: #fff;
+$main-color: #ee8830;
+$main-navbar-color: #23292d;
+$bg-gradient: linear-gradient(to right, #353e43, #191d21);
+
+$txt-main-color: rgba(233, 231, 231, 0.767);
+$txt-second-color: rgb(129, 129, 129);
+$txt-white-color: rgb(255, 255, 255);
+$txt-black-color: rgb(0, 0, 0);
+
+$btn-main-bg: rgb(147, 45, 156);
+$btn-main-color: rgb(255, 255, 255);
+
+$header-height: 100px;
+$header-tablet-height: 100px;
+$header-mobile-height: 80px;
+
+$box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+$colors: (
+    "red": #e74c3c,
+    "green": #2ecc71,
+    "blue": #3498db,
+    "yellow": #f1c40f,
+    "purple": #9b59b6,
+    "orange": #ee8830,
+    "pink": #e74c3c,
+    "brown": #8e44ad,
+    "transparent": transparent,
+);
+
+$tablet-width: 1024px;
+$mobile-width: 576px;
+
+$numbers: (0, 1, 2, 3, 4, 5, 6, 7, 8);
+
+$n: 5;
+$x: 17.5%;
+$y: (100% - $n * $x) / ($n - 1);

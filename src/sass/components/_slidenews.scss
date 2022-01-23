@@ -1,0 +1,116 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  cursor: pointer;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  width: 20% !important;
+  @include tablet {
+    width: 30% !important;
+  }
+  @include mobile {
+    width: 100% !important;
+  }
+
+  &:last-child {
+    margin-right: 200px !important;
+  }
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-wrapper {
+  margin-left: 100px;
+  padding-bottom: 50px;
+  @include mobile {
+    margin-left: 10px;
+  }
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0px;
+}
+
+.slide-news {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  overflow: hidden;
+  //   flex-direction: column;
+  //   @include flex(flex-start, space-between);
+  &__img {
+    height: 40%;
+    width: 100%;
+    @include tablet {
+      height: 45%;
+    }
+    @include mobile {
+      height: 55%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__text {
+    flex-direction: column;
+    @include flex(flex-start, space-between);
+    text-align: start;
+    height: calc(60% - 10px);
+    width: 100%;
+    margin-top: 10px;
+    @include tablet {
+      height: calc(55% - 10px);
+    }
+    @include mobile {
+      height: calc(45% - 10px);
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+    button {
+      border: none;
+      background: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #000;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,217 @@
+.header {
+    background-color: transparent;
+    background-position: top;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: $header-height;
+    width: 100%;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    &.hidebg {
+        background-color: $main-navbar-color;
+    }
+    &.hide {
+        transform: translateY(-100%);
+    }
+    @include tablet {
+        padding: 0 20px;
+        height: $header-tablet-height;
+    }
+    @include mobile {
+        padding: 0 10px;
+        height: $header-mobile-height;
+    }
+    &.open {
+        background-color: $main-navbar-color;
+        background-position: center;
+    }
+    .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        display: none;
+        &.open {
+            display: block;
+        }
+    }
+    &__models {
+        display: none;
+
+        @include mobile {
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            z-index: 2;
+        }
+        svg {
+            font-size: 1.2rem;
+            margin-left: 3px;
+        }
+    }
+    &__logo {
+        width: 100%;
+        max-width: 200px;
+
+        svg {
+            width: 150px;
+            path {
+                fill: #ee8830;
+            }
+            @include tablet {
+                width: 100px;
+            }
+            &.active {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    &__cars {
+        display: flex;
+        transition: 0.5s ease-in;
+        color: $txt-main-color;
+        @include mobile {
+            position: absolute;
+            top: $header-mobile-height;
+            left: 0;
+            right: 0;
+            background-color: $main-navbar-color;
+            padding: 10px 10px;
+            visibility: hidden;
+        }
+        &.open {
+            visibility: visible;
+
+            @include mobile {
+                background: #000;
+                color: #fff;
+            }
+        }
+        &__container {
+            cursor: pointer;
+            @include mobile {
+                margin: auto !important;
+            }
+            &__item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                    font-size: 1em;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    margin-right: 8px;
+                    margin-left: 15px;
+                    @include mobile {
+                        margin-left: 5px;
+                        margin-right: 5px;
+                        font-size: 0.9em;
+                    }
+                    &:hover {
+                        color: $txt-main-color;
+                    }
+                    &.active {
+                        color: #fff;
+                    }
+                }
+                svg {
+                    font-size: 1.5em;
+                    transition: 0.5s ease;
+                    &.active {
+                        transform: rotate(180deg);
+                    }
+                    &:hover {
+                        color: $txt-main-color;
+                    }
+                }
+            }
+        }
+    }
+    &__hambugericons {
+        margin-left: auto;
+        svg {
+            font-size: 1.8em;
+            cursor: pointer;
+            border: 1px solid #fff;
+            padding: 2px;
+            border-radius: 2px;
+            line {
+                color: #fff;
+            }
+        }
+    }
+    &__menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 100vh;
+        background-color: $main-navbar-color;
+        display: flex;
+        transform: translateX(100%);
+        flex-direction: column;
+        color: #fff;
+        justify-content: flex-start;
+        transition: all 0.5s ease;
+        z-index: 2;
+        @include tablet {
+            width: 40%;
+        }
+        @include mobile {
+            width: 50%;
+        }
+        &.open {
+            transform: translateX(0);
+        }
+        &-list {
+            padding: 0 40px;
+        }
+        &-item {
+            font-size: 1.2em;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $txt-main-color;
+            cursor: pointer;
+            &.active {
+                color: #ee8830;
+            }
+            &::after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 1px;
+                background-color: #fff;
+                margin-top: 10px;
+                transition: width 0.5s ease;
+            }
+            &:hover {
+                &::after {
+                    width: 50%;
+                }
+            }
+        }
+        &-list > * ~ * {
+            margin-top: 40px;
+        }
+        svg {
+            font-size: 2em;
+            margin: 20px;
+            align-self: end;
+            cursor: pointer;
+        }
+    }
+}
