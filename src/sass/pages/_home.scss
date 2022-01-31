@@ -18,7 +18,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            padding: $header-height 10px;
+            padding: $header-height 0;
             h4 {
                 font-size: 2.5rem;
                 font-weight: 700;
@@ -68,9 +68,9 @@
             z-index: 2;
             transform: translateX(-50%);
             @include tablet{
-             height: 200px;
-            width: 100%;
-                @include flex(center,center)
+                height: 200px;
+                width: 100%;
+                @include flex(center,center);
             }
             &::after {
                 content: "";
@@ -80,9 +80,7 @@
                 background: #fff;
                 margin-top: 1rem;
                 transition: width 0.5s ease;
-                @include tablet{
-                display:none
-                }
+                @include tablet{display: none;}
             }
             &:hover {
                 &::after {
