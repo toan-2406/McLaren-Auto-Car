@@ -67,6 +67,11 @@
             cursor: pointer;
             z-index: 2;
             transform: translateX(-50%);
+            @include tablet{
+             height: 200px;
+            width: 100%;
+                @include flex(center,center)
+            }
             &::after {
                 content: "";
                 display: block;
