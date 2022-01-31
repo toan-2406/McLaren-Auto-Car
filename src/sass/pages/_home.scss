@@ -80,6 +80,9 @@
                 background: #fff;
                 margin-top: 1rem;
                 transition: width 0.5s ease;
+                @include tablet{
+                display:none
+                }
             }
             &:hover {
                 &::after {
