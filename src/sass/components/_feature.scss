@@ -78,6 +78,10 @@
 
                     visibility: hidden;
                     transform: translateX(-100px);
+                    @include tablet{
+                    visibility:visible;
+                        transform:translateX(0);
+                    }
 
                     svg {
                         font-size: 1.5rem;
